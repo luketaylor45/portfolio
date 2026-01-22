@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const links = [
     { name: "GitHub", icon: Github, url: "https://github.com/luketaylor45" },
-    { name: "Indeed", icon: LinkedinIcon, url: "www.linkedin.com/in/luke-taylor-b89395376" },
+    { name: "LinkedIn", icon: LinkedinIcon, url: "www.linkedin.com/in/luke-taylor-b89395376" },
     { name: "Email", icon: Mail, url: "mailto:luketaylor612@gmail.com" },
 ]
 

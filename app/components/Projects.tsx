@@ -11,15 +11,15 @@ const projects = [
         description: "Low-latency streaming platform for real-time environment observation with archive management.",
         tags: ["Next.js", "Video.js", "HLS"],
         link: "https://birdcam.tayr.dev",
-        github: "#"
+        github: "https://github.com/luketaylor45/birdcam"
     },
     {
-        title: "Sentinal",
-        category: "Security Software",
-        description: "Protection layer for high-availability distributed systems and monitoring.",
-        tags: ["Go", "Distributed", "Security"],
-        link: "#",
-        github: "#"
+        title: "Portfolio",
+        category: "Web Development",
+        description: "My portfolio to properly display my work, skills and provide all the possibly links you could use to contact me.",
+        tags: ["Next.js", "TypeScript", "TailwindCSS"],
+        link: "https://tayr.dev",
+        github: "https://github.com/luketaylor45/portfolio"
     }
 ]
 
