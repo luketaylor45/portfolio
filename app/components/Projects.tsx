@@ -18,7 +18,7 @@ const projects = [
         category: "Web Development",
         description: "My portfolio to properly display my work, skills and provide all the possibly links you could use to contact me.",
         tags: ["Next.js", "TypeScript", "TailwindCSS"],
-        link: "https://tayr.dev",
+        link: "#",
         github: "https://github.com/luketaylor45/portfolio"
     }
 ]
@@ -80,22 +80,26 @@ export function Projects() {
 
                             {/* Project Buttons */}
                             <div className="flex flex-wrap gap-5 pt-8">
-                                <motion.a
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    href={project.link}
-                                    className="flex items-center gap-3 px-8 py-3.5 glossy-red text-white text-[11px] font-extrabold uppercase tracking-widest rounded-full transition-all shadow-xl"
-                                >
-                                    <Globe size={15} strokeWidth={3} /> Launch Demo
-                                </motion.a>
-                                <motion.a
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    whileTap={{ scale: 0.98 }}
-                                    href={project.github}
-                                    className="flex items-center gap-3 px-8 py-3.5 bg-secondary text-foreground text-[11px] font-extrabold uppercase tracking-widest rounded-full transition-all hover:bg-neutral-200 dark:hover:bg-neutral-800 border border-border/50"
-                                >
-                                    <Github size={15} strokeWidth={3} /> Repository
-                                </motion.a>
+                                {project.link !== "#" && (
+                                    <motion.a
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        href={project.link}
+                                        className="flex items-center gap-3 px-8 py-3.5 glossy-red text-white text-[11px] font-extrabold uppercase tracking-widest rounded-full transition-all shadow-xl"
+                                    >
+                                        <Globe size={15} strokeWidth={3} /> Launch Demo
+                                    </motion.a>
+                                )}
+                                {project.github !== "#" && (
+                                    <motion.a
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        href={project.github}
+                                        className="flex items-center gap-3 px-8 py-3.5 bg-secondary text-foreground text-[11px] font-extrabold uppercase tracking-widest rounded-full transition-all hover:bg-neutral-200 dark:hover:bg-neutral-800 border border-border/50"
+                                    >
+                                        <Github size={15} strokeWidth={3} /> Repository
+                                    </motion.a>
+                                )}
                             </div>
                         </div>
                     </motion.div>
