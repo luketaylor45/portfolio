@@ -34,22 +34,6 @@ const getStatusColor = (status: Project["status"]) => {
 
 const projects: Project[] = [
     {
-        id: "nexilis",
-        title: "Nexilis Gamemode",
-        description: "A complex roleplay framework for Garry's Mod with custom UI, SQL integration, and heavy optimization.",
-        tags: ["Lua", "SQL", "Game Design", "Networking"],
-        status: "Live",
-        longDescription: "Nexilis is a comprehensive gamemode framework built for high-performance roleplay servers. It features a complete custom UI library, persistent character data via MySQL, and optimized networking for hundreds of concurrent players.",
-        features: [
-            "Custom 3D/2D UI System",
-            "Optimized Net Networking",
-            "Modular Character System",
-            "Integrated SQL Database Wrapper"
-        ],
-        github: "https://github.com/luketaylor45",
-        link: "#"
-    },
-    {
         id: "atlas",
         title: "Atlas Control Panel",
         description: "A high-performance service hosting daemon and panel for managing Docker containers.",
@@ -62,39 +46,71 @@ const projects: Project[] = [
             "Resource Usage Monitoring",
             "Secure API Authentication"
         ],
-        github: "https://github.com/luketaylor45",
+        github: "https://github.com/luketaylor45/atlas",
         link: "#"
     },
     {
-        id: "birdcam",
-        title: "BirdCam",
-        description: "A standalone video streaming application for ornithology enthusiasts.",
-        tags: ["JavaScript", "Video.js", "HTML5", "CSS"],
+        id: "flowt",
+        title: "Flowt",
+        description: "A modern, sleek, and self-hosted project management application built for data ownership.",
+        tags: ["Next.js", "Prisma", "Tailwind CSS", "PostgreSQL"],
         status: "Live",
-        longDescription: "BirdCam provides a clean, responsive interface for viewing live bird feeds and archived footage. It features a custom video player and timeline navigation.",
+        longDescription: "Flowt is a performance-driven project management platform designed for teams who value data ownership. It offers a premium user experience with features like dynamic Kanban boards and rich task tracking.",
         features: [
-            "Custom Video Player Overlay",
-            "Live Stream Indicator",
-            "Archive Timeline Navigation",
-            "Responsive Layout"
+            "Dynamic Kanban Boards",
+            "Granular Role-Based Access",
+            "Real-time Activity Streams",
+            "Local & Remote Database Support"
         ],
-        github: "https://github.com/luketaylor45",
+        github: "https://github.com/luketaylor45/flowt",
+        link: "#"
+    },
+    {
+        id: "bullseye",
+        title: "Bullseye",
+        description: "A modern darts scoring and statistics application designed for high-performance and mobile use.",
+        tags: ["Next.js", "Framer Motion", "IndexedDB", "P2P"],
+        status: "In Development",
+        longDescription: "Bullseye is a high-performance darts scoring application designed for mobile use. It features real-time statistics tracking, P2P multiplayer support, and an offline-first architecture using IndexedDB.",
+        features: [
+            "Real-time Score Tracking",
+            "Player Statistics & Heatmaps",
+            "P2P Local Multiplayer",
+            "Offline-first with Dexie.js"
+        ],
+        github: "https://github.com/luketaylor45/darts-app",
         link: "#"
     },
     {
         id: "sentinel",
         title: "Sentinel",
-        description: "Advanced administration and security system for game servers.",
-        tags: ["Lua", "Security", "Admin Tools"],
-        status: "Live",
-        longDescription: "Sentinel acts as a guardian for game servers, providing administrators with powerful tools to monitor player activity, detect anomalies, and enforce rules automatically.",
+        description: "Advanced administration and security system for game servers and community management.",
+        tags: ["Next.js", "React", "Security", "Admin Tools"],
+        status: "In Development",
+        longDescription: "Sentinel acts as a guardian for game servers, providing administrators with powerful tools to monitor player activity, detect anomalies, and enforce rules automatically via a modern dashboard.",
         features: [
             "Automated Threat Detection",
             "Admin Logging & Reporting",
             "Visual Admin Dashboard",
             "Player Reputation System"
         ],
-        github: "https://github.com/luketaylor45",
+        github: "https://github.com/luketaylor45/sentinel",
+        link: "#"
+    },
+    {
+        id: "birdcam",
+        title: "BirdCam",
+        description: "A local birdcam application for personal use, featuring motion detection and secure streaming.",
+        tags: ["Next.js", "Raspberry Pi", "Video.js"],
+        status: "Live",
+        longDescription: "BirdCam is a smart monitoring solution designed to capture and archive footage from a birdbox. Built with a Raspberry Pi and a custom web interface, it provides motion detection and instant notifications.",
+        features: [
+            "Motion Detection & Recording",
+            "Secure Live Streaming",
+            "Instant Mobile Notifications",
+            "Organized Video Archives"
+        ],
+        github: "https://github.com/luketaylor45/birdcam",
         link: "#"
     }
 ]
