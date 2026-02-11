@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #e5e5e5;
+
+  --card: #0d0d0d;
+  --card-foreground: #e5e5e5;
+
+  --popover: #0d0d0d;
+  --popover-foreground: #e5e5e5;
+
+  --primary: #ef4444;
+  --primary-foreground: #ffffff;
+
+  --secondary: #161616;
+  --secondary-foreground: #e5e5e5;
+
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+
+  --accent: #ef4444;
+  --accent-foreground: #ffffff;
+
+  --destructive: #7f1d1d;
+  --destructive-foreground: #ffffff;
+
+  --border: #333333;
+  --input: #333333;
+  --ring: #ef4444;
+
+  --radius: 0.5rem;
+
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom Scrollbar for Terminal Feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: #ef4444;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.glitch-effect {
+  position: relative;
+}
+
+.glitch-effect::before,
+.glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch-effect::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-effect::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 86%, 0 86%);
+  }
+
+  20% {
+    clip-path: polygon(0 54%, 100% 54%, 100% 16%, 0 16%);
+  }
+
+  40% {
+    clip-path: polygon(0 98%, 100% 98%, 100% 2%, 0 2%);
+  }
+
+  60% {
+    clip-path: polygon(0 4%, 100% 4%, 100% 58%, 0 58%);
+  }
+
+  80% {
+    clip-path: polygon(0 25%, 100% 25%, 100% 93%, 0 93%);
+  }
+
+  100% {
+    clip-path: polygon(0 76%, 100% 76%, 100% 4%, 0 4%);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip-path: polygon(0 65%, 100% 65%, 100% 26%, 0 26%);
+  }
+
+  20% {
+    clip-path: polygon(0 24%, 100% 24%, 100% 56%, 0 56%);
+  }
+
+  40% {
+    clip-path: polygon(0 8%, 100% 8%, 100% 82%, 0 82%);
+  }
+
+  60% {
+    clip-path: polygon(0 94%, 100% 94%, 100% 38%, 0 38%);
+  }
+
+  80% {
+    clip-path: polygon(0 15%, 100% 15%, 100% 23%, 0 23%);
+  }
+
+  100% {
+    clip-path: polygon(0 36%, 100% 36%, 100% 94%, 0 94%);
+  }
+}
